@@ -10,6 +10,10 @@ button {
   font-size: 18px;
 }
 
+button:hover {
+  color: white;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -22,20 +26,36 @@ button {
   gap: 50px;
 }
 
+.color-flipper {
+  color: darkcyan;
+}
+
 .color {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 400px;
+  margin-top: 250px;
   gap: 50px;
 }
 
 h1 {
-  width: 500px;
+  width: 450px;
   height: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: black;
   color: white;
   padding: 10px;
+}
+
+.clickMe-Btn {
+  padding: 5px;
+  border: 2px solid darkcyan;
+  box-shadow: 0 9px #999;
+}
+
+.clickMe-Btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

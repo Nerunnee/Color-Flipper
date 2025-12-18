@@ -8,16 +8,20 @@
   </head>
   <body>
     <div class="header">
-      <button>Color Flipper</button>
+      <button class="color-flipper">Color Flipper</button>
 
       <div class="header__section">
-        <button>Simple</button>
+        <button onclick="defualtColor()">Simple</button>
         <button>Hex</button>
       </div>
     </div>
 
-    <div id="colortext"></div>
-    <button onclick="changeBackround()">CLICK ME</button>
+    <div class="color">
+      <div id="colorText">
+        <h1>Backround Color: #FFFFFF</h1>
+      </div>
+      <button onclick="changeBackround()" class="clickMe-Btn">CLICK ME</button>
+    </div>
 
     <script src="./script.js"></script>
   </body>

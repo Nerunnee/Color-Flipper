@@ -5,7 +5,7 @@ const randomColor = () => {
   let color = "#";
 
   for (let i = 0; i < 6; i++) {
-    color += hexCharacters[Math.floor(Math.random() * 16)];
+    color += hexCharacters[Math.floor(Math.random() * hexCharacters.length)];
   }
 
   colorText1.innerHTML = `<h1>Backround Color: ${color}</h1>`;

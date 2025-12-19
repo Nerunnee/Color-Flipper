@@ -8,11 +8,13 @@
   </head>
   <body>
     <div class="header">
-      <button class="color-flipper">Color Flipper</button>
+      <button class="color-flipper" onclick="defaultColor()">
+        Color Flipper
+      </button>
 
       <div class="header__section">
-        <button onclick="defualtColor()">Simple</button>
-        <button>Hex</button>
+        <button onclick="changeSimpleColor()">Simple</button>
+        <button onclick="changeBackroundHex()">Hex</button>
       </div>
     </div>
 
@@ -20,7 +22,7 @@
       <div id="colorText">
         <h1>Backround Color: #FFFFFF</h1>
       </div>
-      <button onclick="changeBackround()" class="clickMe-Btn">CLICK ME</button>
+      <button onclick="selectHexBtn()" class="clickMe-Btn">CLICK ME</button>
     </div>
 
     <script src="./script.js"></script>

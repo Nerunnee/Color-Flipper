@@ -1,5 +1,20 @@
 const colorText1 = document.querySelector("#colorText");
 
+const simpleColors = ["red", "green", "blue"];
+
+const defaultColor = () => {
+  colorText1.innerHTML = `<h1>Backround Color: #FFFFFF</h1>`;
+  document.body.style.backgroundColor = "#FFFFFF";
+};
+
+const changeSimpleColor = () => {
+  const selectColorName =
+    simpleColors[Math.floor(Math.random() * simpleColors.length)];
+
+  colorText1.innerHTML = `<h1>Backround Color: ${selectColorName} </h1>`;
+  document.body.style.backgroundColor = selectColorName;
+};
+
 const randomColor = () => {
   const hexCharacters = "0123456789ABCDEF";
   let color = "#";
@@ -13,11 +28,10 @@ const randomColor = () => {
   return color;
 };
 
-const changeBackround = () => {
+const changeBackroundHex = () => {
   document.body.style.backgroundColor = randomColor();
 };
 
-const defualtColor = () => {
-  colorText1.innerHTML = `<h1>Backround Color: #FFFFFF</h1>`;
-  document.body.style.backgroundColor = "#FFFFFF";
+const selectHexBtn = () => {
+  changeBackroundHex();
 };

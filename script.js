@@ -1,9 +1,34 @@
 const colorText1 = document.querySelector("#colorText");
+const simple = document.getElementById("simple-btn");
+const hex = document.getElementById("hex-btn");
+const clickMe = document.getElementById("clickMe-btn");
 
 const simpleColors = ["red", "green", "blue"];
 
+let currentMode = "simple";
+
+simple.addEventListener("click", () => {
+  currentMode = "simple";
+  simple.classList.add("active");
+  hex.classList.remove("active");
+});
+
+hex.addEventListener("click", () => {
+  currentMode = "hex";
+  hex.classList.add("active");
+  simple.classList.remove("active");
+});
+
+clickMe.addEventListener("click", () => {
+  if (currentMode === "simple") {
+    changeSimpleColor();
+  } else {
+    changeBackround();
+  }
+});
+
 const defaultColor = () => {
-  colorText1.innerHTML = `<h1>Backround Color: #FFFFFF</h1>`;
+  colorText1.innerHTML = `<h1>Background Color: #FFFFFF</h1>`;
   document.body.style.backgroundColor = "#FFFFFF";
 };
 
@@ -28,10 +53,8 @@ const randomColor = () => {
   return color;
 };
 
-const changeBackroundHex = () => {
+const changeBackround = () => {
   document.body.style.backgroundColor = randomColor();
 };
 
-const selectHexBtn = () => {
-  changeBackroundHex();
-};
+simple.classList.add("active");

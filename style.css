@@ -11,7 +11,10 @@ button {
 }
 
 button:hover {
-  color: white;
+  width: 120px;
+  height: 30px;
+  border: 2px solid darkcyan;
+  border-radius: 10px;
 }
 
 .header {
@@ -52,6 +55,7 @@ h1 {
 .clickMe-Btn {
   padding: 5px;
   border: 2px solid darkcyan;
+  border-radius: 10px;
   box-shadow: 0 9px #999;
 }
 

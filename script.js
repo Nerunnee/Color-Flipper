@@ -19,14 +19,6 @@ hex.addEventListener("click", () => {
   simple.classList.remove("active");
 });
 
-clickMe.addEventListener("click", () => {
-  if (currentMode === "simple") {
-    changeSimpleColor();
-  } else {
-    changeBackround();
-  }
-});
-
 const defaultColor = () => {
   colorText1.innerHTML = `<h1>Background Color: #FFFFFF</h1>`;
   document.body.style.backgroundColor = "#FFFFFF";
@@ -57,4 +49,10 @@ const changeBackround = () => {
   document.body.style.backgroundColor = randomColor();
 };
 
-simple.classList.add("active");
+clickMe.addEventListener("click", () => {
+  if (currentMode === "simple") {
+    changeSimpleColor();
+  } else {
+    changeBackround();
+  }
+});
